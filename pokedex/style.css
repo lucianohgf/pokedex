@@ -1,0 +1,217 @@
+body {
+    font-family: "Comic Sans MS", cursive;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.search-bar {
+    padding: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+li {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.pokemon-card {
+    text-align: center;
+}
+
+.pokemon-img {
+    width: 200px;
+}
+
+.fire { background-color: #c27e10; }
+.grass { background-color: #4CAF50; }
+.dragon { background-color: #3263cc; }
+.ice { background-color: #42bed3; }
+.fighting { background-color: #ba082a; }
+.ground { background-color: #9e7e52; }
+.bug { background-color: #98e880; }
+.normal { background-color: #A9A9A9; }
+.poison { background-color: #9e5cda; }
+.electric { background-color: #ffd365; }
+.rock { background-color: #897975; }
+.steel { background-color: #999999; }
+.psychic { background-color: #e39fa4; }
+.fairy { background-color: #f040f3; }
+.dark { background-color: #12124f; }
+.water { background-color: #00BFFF; }
+.flying { background-color: #23f1c7; }
+.ghost { background-color: #5626de; }
+
+/* Gradientes para Pokémon com dois tipos */
+.fire.grass { background: linear-gradient(to right, #c27e10 50%, #4CAF50 50%); }
+.fire.dragon { background: linear-gradient(to right, #c27e10 50%, #3263cc 50%); }
+.fire.ice { background: linear-gradient(to right, #c27e10 50%, #42bed3 50%); }
+.fire.fighting { background: linear-gradient(to right, #c27e10 50%, #ba082a 50%); }
+.fire.ground { background: linear-gradient(to right, #c27e10 50%, #9e7e52 50%); }
+.fire.bug { background: linear-gradient(to right, #c27e10 50%, #98e880 50%); }
+.fire.normal { background: linear-gradient(to right, #c27e10 50%, #A9A9A9 50%); }
+.fire.poison { background: linear-gradient(to right, #c27e10 50%, #9e5cda 50%); }
+.fire.electric { background: linear-gradient(to right, #c27e10 50%, #ffd365 50%); }
+.fire.rock { background: linear-gradient(to right, #c27e10 50%, #897975 50%); }
+.fire.steel { background: linear-gradient(to right, #c27e10 50%, #999999 50%); }
+.fire.psychic { background: linear-gradient(to right, #c27e10 50%, #e39fa4 50%); }
+.fire.fairy { background: linear-gradient(to right, #c27e10 50%, #f040f3 50%); }
+.fire.dark { background: linear-gradient(to right, #c27e10 50%, #12124f 50%); }
+.fire.water { background: linear-gradient(to right, #c27e10 50%, #00BFFF 50%); }
+.fire.flying { background: linear-gradient(to right, #c27e10 50%, #23f1c7 50%); }
+.fire.ghost { background: linear-gradient(to right, #c27e10 50%, #5626de 50%); }
+.grass.dragon { background: linear-gradient(to right, #4CAF50 50%, #3263cc 50%); }
+.grass.ice { background: linear-gradient(to right, #4CAF50 50%, #42bed3 50%); }
+.grass.fighting { background: linear-gradient(to right, #4CAF50 50%, #ba082a 50%); }
+.grass.ground { background: linear-gradient(to right, #4CAF50 50%, #9e7e52 50%); }
+.grass.bug { background: linear-gradient(to right, #4CAF50 50%, #98e880 50%); }
+.grass.normal { background: linear-gradient(to right, #4CAF50 50%, #A9A9A9 50%); }
+.grass.poison { background: linear-gradient(to right, #4CAF50 50%, #9e5cda 50%); }
+.grass.electric { background: linear-gradient(to right, #4CAF50 50%, #ffd365 50%); }
+.grass.rock { background: linear-gradient(to right, #4CAF50 50%, #897975 50%); }
+.grass.steel { background: linear-gradient(to right, #4CAF50 50%, #999999 50%); }
+.grass.psychic { background: linear-gradient(to right, #4CAF50 50%, #e39fa4 50%); }
+.grass.fairy { background: linear-gradient(to right, #4CAF50 50%, #f040f3 50%); }
+.grass.dark { background: linear-gradient(to right, #4CAF50 50%, #12124f 50%); }
+.grass.water { background: linear-gradient(to right, #4CAF50 50%, #00BFFF 50%); }
+.grass.flying { background: linear-gradient(to right, #4CAF50 50%, #23f1c7 50%); }
+.grass.ghost { background: linear-gradient(to right, #4CAF50 50%, #5626de 50%); }
+.dragon.ice { background: linear-gradient(to right, #3263cc 50%, #42bed3 50%); }
+.dragon.fighting { background: linear-gradient(to right, #3263cc 50%, #ba082a 50%); }
+.dragon.ground { background: linear-gradient(to right, #3263cc 50%, #9e7e52 50%); }
+.dragon.bug { background: linear-gradient(to right, #3263cc 50%, #98e880 50%); }
+.dragon.normal { background: linear-gradient(to right, #3263cc 50%, #A9A9A9 50%); }
+.dragon.poison { background: linear-gradient(to right, #3263cc 50%, #9e5cda 50%); }
+.dragon.electric { background: linear-gradient(to right, #3263cc 50%, #ffd365 50%); }
+.dragon.rock { background: linear-gradient(to right, #3263cc 50%, #897975 50%); }
+.dragon.steel { background: linear-gradient(to right, #3263cc 50%, #999999 50%); }
+.dragon.psychic { background: linear-gradient(to right, #3263cc 50%, #e39fa4 50%); }
+.dragon.fairy { background: linear-gradient(to right, #3263cc 50%, #f040f3 50%); }
+.dragon.dark { background: linear-gradient(to right, #3263cc 50%, #12124f 50%); }
+.dragon.water { background: linear-gradient(to right, #3263cc 50%, #00BFFF 50%); }
+.dragon.flying { background: linear-gradient(to right, #3263cc 50%, #23f1c7 50%); }
+.dragon.ghost { background: linear-gradient(to right, #3263cc 50%, #5626de 50%); }
+.ice.fighting { background: linear-gradient(to right, #42bed3 50%, #ba082a 50%); }
+.ice.ground { background: linear-gradient(to right, #42bed3 50%, #9e7e52 50%); }
+.ice.bug { background: linear-gradient(to right, #42bed3 50%, #98e880 50%); }
+.ice.normal { background: linear-gradient(to right, #42bed3 50%, #A9A9A9 50%); }
+.ice.poison { background: linear-gradient(to right, #42bed3 50%, #9e5cda 50%); }
+.ice.electric { background: linear-gradient(to right, #42bed3 50%, #ffd365 50%); }
+.ice.rock { background: linear-gradient(to right, #42bed3 50%, #897975 50%); }
+.ice.steel { background: linear-gradient(to right, #42bed3 50%, #999999 50%); }
+.ice.psychic { background: linear-gradient(to right, #42bed3 50%, #e39fa4 50%); }
+.ice.fairy { background: linear-gradient(to right, #42bed3 50%, #f040f3 50%); }
+.ice.dark { background: linear-gradient(to right, #42bed3 50%, #12124f 50%); }
+.ice.water { background: linear-gradient(to right, #42bed3 50%, #00BFFF 50%); }
+.ice.flying { background: linear-gradient(to right, #42bed3 50%, #23f1c7 50%); }
+.ice.ghost { background: linear-gradient(to right, #42bed3 50%, #5626de 50%); }
+.fighting.ground { background: linear-gradient(to right, #ba082a 50%, #9e7e52 50%); }
+.fighting.bug { background: linear-gradient(to right, #ba082a 50%, #98e880 50%); }
+.fighting.normal { background: linear-gradient(to right, #ba082a 50%, #A9A9A9 50%); }
+.fighting.poison { background: linear-gradient(to right, #ba082a 50%, #9e5cda 50%); }
+.fighting.eletric { background: linear-gradient(to right, #ba082a 50%, #ffd365 50%); }
+.fighting.rock { background: linear-gradient(to right, #ba082a 50%, #897975 50%); }
+.fighting.steel { background: linear-gradient(to right, #ba082a 50%, #999999 50%); }
+.fighting.psychic { background: linear-gradient(to right, #ba082a 50%, #e39fa4 50%); }
+.fighting.fairy { background: linear-gradient(to right, #ba082a 50%, #f040f3 50%); }
+.fighting.dark { background: linear-gradient(to right, #ba082a 50%, #12124f 50%); }
+.fighting.water { background: linear-gradient(to right, #ba082a 50%, #00BFFF 50%); }
+.fighting.flying { background: linear-gradient(to right, #ba082a 50%, #23f1c7 50%); }
+.fighting.ghost { background: linear-gradient(to right, #ba082a 50%, #5626de 50%); }
+.ground.bug { background: linear-gradient(to right, #9e7e52 50%, #98e880 50%); }
+.ground.normal { background: linear-gradient(to right, #9e7e52 50%, #A9A9A9 50%); }
+.ground.poison { background: linear-gradient(to right, #9e7e52 50%, #9e5cda 50%); }
+.ground.electric { background: linear-gradient(to right, #9e7e52 50%, #ffd365 50%); }
+.ground.rock { background: linear-gradient(to right, #9e7e52 50%, #897975 50%); }
+.ground.steel { background: linear-gradient(to right, #9e7e52 50%, #999999 50%); }
+.ground.psychic { background: linear-gradient(to right, #9e7e52 50%, #e39fa4 50%); }
+.ground.fairy { background: linear-gradient(to right, #9e7e52 50%, #f040f3 50%); }
+.ground.dark { background: linear-gradient(to right, #9e7e52 50%, #12124f 50%); }
+.ground.water { background: linear-gradient(to right, #9e7e52 50%, #00BFFF 50%); }
+.ground.flying { background: linear-gradient(to right, #9e7e52 50%, #23f1c7 50%); }
+.ground.ghost { background: linear-gradient(to right, #9e7e52 50%, #5626de 50%); }
+.bug.normal { background: linear-gradient(to right, #98e880 50%, #A9A9A9 50%); }
+.bug.poison { background: linear-gradient(to right, #98e880 50%, #9e5cda 50%); }
+.bug.electric { background: linear-gradient(to right, #98e880 50%, #ffd365 50%); }
+.bug.rock { background: linear-gradient(to right, #98e880 50%, #897975 50%); }
+.bug.steel { background: linear-gradient(to right, #98e880 50%, #999999 50%); }
+.bug.psychic { background: linear-gradient(to right, #98e880 50%, #e39fa4 50%); }
+.bug.fairy { background: linear-gradient(to right, #98e880 50%, #f040f3 50%); }
+.bug.dark { background: linear-gradient(to right, #98e880 50%, #12124f 50%); }
+.bug.water { background: linear-gradient(to right, #98e880 50%, #00BFFF 50%); }
+.bug.flying { background: linear-gradient(to right, #98e880 50%, #23f1c7 50%); }
+.bug.ghost { background: linear-gradient(to right, #98e880 50%, #5626de 50%); }
+.normal.poison { background: linear-gradient(to right, #A9A9A9 50%, #9e5cda 50%); }
+.normal.electric { background: linear-gradient(to right, #A9A9A9 50%, #ffd365 50%); }
+.normal.rock { background: linear-gradient(to right, #A9A9A9 50%, #897975 50%); }
+.normal.steel { background: linear-gradient(to right, #A9A9A9 50%, #999999 50%); }
+.normal.psychic { background: linear-gradient(to right, #A9A9A9 50%, #e39fa4 50%); }
+.normal.fairy { background: linear-gradient(to right, #A9A9A9 50%, #f040f3 50%); }
+.normal.dark { background: linear-gradient(to right, #A9A9A9 50%, #12124f 50%); }
+.normal.water { background: linear-gradient(to right, #A9A9A9 50%, #00BFFF 50%); }
+.normal.flying { background: linear-gradient(to right, #A9A9A9 50%, #23f1c7 50%); }
+.normal.ghost { background: linear-gradient(to right, #A9A9A9 50%, #5626de 50%); }
+.poison.electric { background: linear-gradient(to right, #9e5cda 50%, #ffd365 50%); }
+.poison.rock { background: linear-gradient(to right, #9e5cda 50%, #897975 50%); }
+.poison.steel { background: linear-gradient(to right, #9e5cda 50%, #999999 50%); }
+.poison.psychic { background: linear-gradient(to right, #9e5cda 50%, #e39fa4 50%); }
+.poison.fairy { background: linear-gradient(to right, #9e5cda 50%, #f040f3 50%); }
+.poison.dark { background: linear-gradient(to right, #9e5cda 50%, #12124f 50%); }
+.poison.water { background: linear-gradient(to right, #9e5cda 50%, #00BFFF 50%); }
+.poison.flying { background: linear-gradient(to right, #9e5cda 50%, #23f1c7 50%); }
+.poison.ghost { background: linear-gradient(to right, #9e5cda 50%, #5626de 50%); }
+.electric.rock { background: linear-gradient(to right, #ffd365 50%, #897975 50%); }
+.electric.steel { background: linear-gradient(to right, #ffd365 50%, #999999 50%); }
+.electric.psychic { background: linear-gradient(to right, #ffd365 50%, #e39fa4 50%); }
+.electric.fairy { background: linear-gradient(to right, #ffd365 50%, #f040f3 50%); }
+.electric.dark { background: linear-gradient(to right, #ffd365 50%, #12124f 50%); }
+.electric.water { background: linear-gradient(to right, #ffd365 50%, #00BFFF 50%); }
+.electric.flying { background: linear-gradient(to right, #ffd365 50%, #23f1c7 50%); }
+.electric.ghost { background: linear-gradient(to right, #ffd365 50%, #5626de 50%); }
+.rock.steel { background: linear-gradient(to right, #897975 50%, #999999 50%); }
+.rock.psychic { background: linear-gradient(to right, #897975 50%, #e39fa4 50%); }
+.rock.fairy { background: linear-gradient(to right, #897975 50%, #f040f3 50%); }
+.rock.dark { background: linear-gradient(to right, #897975 50%, #12124f 50%); }
+.rock.water { background: linear-gradient(to right, #897975 50%, #00BFFF 50%); }
+.rock.flying { background: linear-gradient(to right, #897975 50%, #23f1c7 50%); }
+.rock.ghost { background: linear-gradient(to right, #897975, #5626de 50%); }
+.steel.psychic { background: linear-gradient(to right, #999999 50%, #e39fa4 50%); }
+.steel.fairy { background: linear-gradient(to right, #999999 50%, #f040f3 50%); }
+.steel.dark { background: linear-gradient(to right, #999999 50%, #12124f 50%); }
+.steel.water { background: linear-gradient(to right, #999999 50%, #00BFFF 50%); }
+.steel.flying { background: linear-gradient(to right, #999999 50%, #23f1c7 50%); }
+.steel.ghost { background: linear-gradient(to right, #999999 50%, #5626de 50%); }
+.psychic.fairy { background: linear-gradient(to right, #e39fa4 50%, #f040f3 50%); }
+.psychic.dark { background: linear-gradient(to right, #e39fa4 50%, #12124f 50%); }
+.psychic.water { background: linear-gradient(to right, #e39fa4 50%, #00BFFF 50%); }
+.psychic.flying { background: linear-gradient(to right, #e39fa4 50%, #23f1c7 50%); }
+.psychic.ghost { background: linear-gradient(to right, #e39fa4 50%, #5626de 50%); }
+.fairy.dark { background: linear-gradient(to right, #f040f3 50%, #12124f 50%); }
+.fairy.water { background: linear-gradient(to right, #f040f3 50%, #00BFFF 50%); }
+.fairy.flying { background: linear-gradient(to right, #f040f3 50%, #23f1c7 50%); }
+.fairy.ghost { background: linear-gradient(to right, #f040f3 50%, #5626de 50%); }
+.dark.water { background: linear-gradient(to right, #12124f 50%, #00BFFF 50%); }
+.dark.flying { background: linear-gradient(to right, #12124f 50%, #23f1c7 50%); }
+.dark.ghost { background: linear-gradient(to right, #12124f 50%, #5626de 50%); }
+.water.flying { background: linear-gradient(to right, #00BFFF 50%, #23f1c7 50%); }
+.water.ghost { background: linear-gradient(to right, #00BFFF 50%, #5626de 50%); }
+.flying.ghost { background: linear-gradient(to right, #23f1c7 50%, #5626de 50%); }
